@@ -48,9 +48,26 @@
     border-left-style: inset;
     text-align: inherit;
     align-items: center;
+    color: initial;
+    transition: color 0.3s; 
+    z-index: 2;
+}
+      
+.selection:hover {
+        color: white;
+}
+
+.input_style{
+    width: 60px;
+    margin-right: 10px;
+    border-radius: 10px;
 }
 
 .Icon{
     width: 40px;
     float: right;
+}
+
+.btn{
+    text-align: right;
 }

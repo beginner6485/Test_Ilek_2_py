@@ -1,0 +1,30 @@
+.Banner{
+    height: 223px;
+    background-color: grey;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative; 
+    margin: 50px;
+    margin-top: 110px;
+
+}
+
+.Landscape{
+    height: 1100px;
+    top: -700px;
+    position: absolute;
+    filter: brightness(0.8);
+    width:2000px
+}
+
+.Title{
+    font-size: 600%;
+    display: flex;
+    align-items: center;
+    position: inherit;
+    width: auto;
+    height: 223px;
+    justify-content: center;
+    color: white;
+    font-family: "Ingrid Darling" ;
+}

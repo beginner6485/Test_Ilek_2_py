@@ -4,13 +4,20 @@ import '../src/Styles/index.css';
 import reportWebVitals from './reportWebVitals';
 import Header from './Components/header.tsx'
 import WinesList from './Components/Api_wines.tsx'
+import Tendance from './Components/tendance.tsx'
+import Article from './Components/article.tsx';
+import Footer from './Components/Footer.tsx'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Ingrid+Darling&display=swap" rel="stylesheet"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Ingrid+Darling&display=swap" rel="stylesheet"></link>
     <Header/>
+    <Tendance/>
     <WinesList/>
+    <Article/>
+    <Footer/>
+
   </React.StrictMode>
 );
 

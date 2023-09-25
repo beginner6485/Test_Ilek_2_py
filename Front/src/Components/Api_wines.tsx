@@ -1,5 +1,7 @@
-// L'URL de l'endpoint FastAPI que vous souhaitez interroger
+
 import React, { useEffect, useState } from 'react';
+import "../Styles/api_wines.css"
+
 
 function WinesList() {
   const apiUrl = 'http://localhost:5005/wines';
@@ -14,8 +16,8 @@ function WinesList() {
         }
         return response.json();
       })
-      .then(data => {
-        setData(data);
+      .then(dataFromApi => {
+        setData(dataFromApi);
         setLoading(false);
       })
       .catch(error => {
@@ -24,16 +26,18 @@ function WinesList() {
       });
   }, []);
 
+
   if (loading) {
     return <p>Chargement en cours...</p>;
   }
 
   return (
     <div>
-      <h1>Liste des vins</h1>
+      <h1 className='wine_list'>Liste des vins</h1>
       <ul>
         {data.map(wine => (
-          <li key={wine.id}>{wine.name}</li>
+          <li key={wine.id}>
+            {wine.name}</li>
         ))}
       </ul>
     </div>
