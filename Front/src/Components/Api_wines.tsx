@@ -74,6 +74,7 @@ function WinesList() {
       if (minPrice === "" && maxPrice === "") {
     }
   }
+  
 
       if (loading) {
         return <p>Chargement en cours...</p>;

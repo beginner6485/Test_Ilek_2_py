@@ -54,6 +54,7 @@ function Header ({ handleSortByPrice,setMinPrice, setMaxPrice, applyFilters, res
                                     }} 
                                 className="selection btn">Soumettre
                                 </button>
+                                <button onClick={resetFilters} className="selection">Réinitialiser</button>
                                 </div>
                             )}
                         </div>
