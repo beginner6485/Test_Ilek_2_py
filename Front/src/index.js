@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import '../src/Styles/index.css';
 import reportWebVitals from './reportWebVitals';
 import WinesList from './Components/Api_wines.tsx';
-import WineItem from './Components/Article.tsx';
 import Tendance from './Components/Tendance.tsx';
 import Footer from './Components/Footer.tsx';
 
@@ -15,7 +14,6 @@ root.render(
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Ingrid+Darling&display=swap" rel="stylesheet"></link>
     <WinesList/>
     <Tendance/>
-    <WineItem/>
     <Footer/>
 
   </React.StrictMode>

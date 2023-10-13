@@ -1,9 +1,9 @@
 .article_container{
     width: 1340px;
     flex-flow: wrap;
-    justify-content: space-between;
     margin: 40px;
     display: flex;
+    justify-content: space-evenly;
 }
 
 .Space_Bottle{
@@ -90,4 +90,8 @@ Span{
 .Price_Space{
     height: 100px;
     background-color: brown;
+}
+
+.price_article{
+    width: 50px;
 }

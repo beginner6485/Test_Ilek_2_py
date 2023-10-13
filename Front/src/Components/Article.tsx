@@ -49,12 +49,12 @@ type WineItemProps = {
               <div className="Avis Color">
                 <span>avis</span>
                 <div className="Button Color">
-                  <span>Button</span>
+                  <span>Ajouter</span>
                 </div>
               </div>
             </div>
-            <span className="price_article">{price} €</span>
-            <span className="lien_arctile">Site de Vente</span>
+            <span className="price_article Color">{price} €</span>
+            <span className="lien_article Color">Site de Vente</span>
           </div>
         </div>
       </div>
