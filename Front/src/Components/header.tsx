@@ -32,7 +32,7 @@ function Header ({ handleSortByPrice,setMinPrice, setMaxPrice, applyFilters, res
                         {isDropdownOpen && (
                             <div className="dropdown selection btn">
                                 <button onClick={handleSortByPrice} className="selection btn">
-                                    Meilleures Prix</button>
+                                    Meilleurs Prix</button>
 
                                 <div className="price-filter selection">
                                     <label>Prix min (€): </label>
@@ -58,6 +58,7 @@ function Header ({ handleSortByPrice,setMinPrice, setMaxPrice, applyFilters, res
                             )}
                         </div>
                     </nav>
+                    <h1 className='wine_list'>Meilleures Ventes</h1>
                 </div>
                 )
             }

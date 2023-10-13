@@ -82,7 +82,6 @@ function WinesList() {
 
       return (
         <div>
-          <h1 className='wine_list'>Liste des vins</h1>
           <Header 
             handleSortByPrice={handleSortByPrice}
             setMinPrice={setMinPrice}
