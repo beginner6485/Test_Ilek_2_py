@@ -2,20 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import '../src/Styles/index.css';
 import reportWebVitals from './reportWebVitals';
-import Header from './Components/header.tsx'
-import WinesList from './Components/Api_wines.tsx'
-import Tendance from './Components/tendance.tsx'
-import Article from './Components/article.tsx';
-import Footer from './Components/Footer.tsx'
+import WinesList from './Components/Api_wines.tsx';
+import WineItem from './Components/Article.tsx';
+import Tendance from './Components/Tendance.tsx';
+import Footer from './Components/Footer.tsx';
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Ingrid+Darling&display=swap" rel="stylesheet"></link>
-    <Header/>
-    <Tendance/>
     <WinesList/>
-    <Article/>
+    <Tendance/>
+    <WineItem/>
     <Footer/>
 
   </React.StrictMode>

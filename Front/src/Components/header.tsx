@@ -6,18 +6,14 @@ import { faCrown } from '@fortawesome/free-solid-svg-icons';
 import { faClipboard } from '@fortawesome/free-solid-svg-icons'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
-function Header (){
+
+function Header ({ handleSortByPrice,setMinPrice, setMaxPrice, applyFilters, resetFilters }){
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-    const [minPrice, setMinPrice] = useState("0");
-    const [maxPrice, setMaxPrice] = useState("8000");
+
 
     const toggleDropdown = () => {
         setIsDropdownOpen(!isDropdownOpen);
       }    
-
-    const applyFilters = () => {
-        alert(`Filtrage par prix min : ${minPrice} € et prix max : ${maxPrice} €`);
-      }
     return (
         <div>
             <div className="Header">
@@ -35,12 +31,13 @@ function Header (){
                         <button className="selection" onClick={toggleDropdown}>Filtres<FontAwesomeIcon icon={faChevronDown} className="Icon" /></button>
                         {isDropdownOpen && (
                             <div className="dropdown selection btn">
-                                <span>Meilleures Ventes</span>
+                                <button onClick={handleSortByPrice} className="selection btn">
+                                    Meilleures Prix</button>
+
                                 <div className="price-filter selection">
                                     <label>Prix min (€): </label>
                                     <input className="input_style"
                                     type="number"
-                                    value={minPrice}
                                     onChange={(e) => setMinPrice(e.target.value)}
                                     />
                                 </div>
@@ -48,11 +45,15 @@ function Header (){
                                     <label>Prix max (€): </label>
                                     <input className="input_style"
                                     type="number"
-                                    value={maxPrice}
                                     onChange={(e) => setMaxPrice(e.target.value)}
                                     />
                                 </div>
-                                <button onClick={applyFilters} className="selection btn">Soumettre</button>
+                                <button onClick={() => {
+                                    applyFilters();
+                                    resetFilters();
+                                    }} 
+                                className="selection btn">Soumettre
+                                </button>
                                 </div>
                             )}
                         </div>

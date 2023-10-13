@@ -8,7 +8,6 @@ function Tendance () {
             <div className="Banner">
                 <img src={Mountains} alt="Terres de vignes" className="Landscape"></img>
                 <div className="Title">Les favoris du moment</div>
-
             </div>
         </div>
     )
