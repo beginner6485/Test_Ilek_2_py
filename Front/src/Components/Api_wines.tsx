@@ -68,13 +68,6 @@ function WinesList() {
         setData(filteredData);
       };
 
-    const resetFilters = () => {
-      setMinPrice("");
-      setMaxPrice("");
-      if (minPrice === "" && maxPrice === "") {
-    }
-  }
-  
 
       if (loading) {
         return <p>Chargement en cours...</p>;
@@ -88,7 +81,7 @@ function WinesList() {
             setMinPrice={setMinPrice}
             setMaxPrice={setMaxPrice}
             applyFilters={applyFilters}
-            resetFilters={resetFilters}
+          
             />
           <ul>
             <div className='article_container'>

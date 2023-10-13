@@ -7,13 +7,18 @@ import { faClipboard } from '@fortawesome/free-solid-svg-icons'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 
-function Header ({ handleSortByPrice,setMinPrice, setMaxPrice, applyFilters, resetFilters }){
+function Header ({ handleSortByPrice,setMinPrice, setMaxPrice, applyFilters}){
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
 
     const toggleDropdown = () => {
         setIsDropdownOpen(!isDropdownOpen);
-      }    
+      };
+
+    const resetPage = () => {
+        window.location.reload();
+      }; 
+
     return (
         <div>
             <div className="Header">
@@ -50,11 +55,10 @@ function Header ({ handleSortByPrice,setMinPrice, setMaxPrice, applyFilters, res
                                 </div>
                                 <button onClick={() => {
                                     applyFilters();
-                                    resetFilters();
                                     }} 
                                 className="selection btn">Soumettre
                                 </button>
-                                <button onClick={resetFilters} className="selection">Réinitialiser</button>
+                                <button onClick={resetPage} className="selection">Réinitialiser</button>
                                 </div>
                             )}
                         </div>
